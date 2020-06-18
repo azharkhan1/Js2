@@ -590,25 +590,18 @@ function Hyp(b,p)
             result(b,p);
 
 /* task 9 */
-
-
 function area(w,h)
 {
              var area = w*h;
              document.write(""+area);            
 }
-
 var  x = area(3,4);
-
 document.write(x);
-
 /* task 10 */
 function palindrome()
 {
-
 var word = prompt("Enter any word");
 var check="";
-
 for (var i = word.length-1;i>=0;i--)
 {
            check +=word.charAt(i);
@@ -623,6 +616,61 @@ else{
 }
 }
 palindrome();
+
 /* task 11*/
+function titleCase(str) {
+        var splitStr = str.toLowerCase().split(' ');
+        for (var i = 0; i < splitStr.length; i++) {
+         
+            splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);     
+        }
+     
+        return splitStr.join(' '); 
+     }
+     
+     document.write(titleCase("the quick brown fox"));
 
+     /* task 12 */
 
+     function longestWord(string) {
+        var str = string.split(" ");
+        var longest = 0;
+        var word = null;
+        for (var i = 0; i < str.length; i++) {
+            if (longest < str[i].length) {
+                longest = str[i].length;
+                word = str[i];
+            }
+        }
+        document.write(""+word);
+    }
+    
+    longestWord("Web Development Tutorial");
+
+    /* task 13 */
+
+    function occur(){
+    var temp = "JSResources.com";
+var count = (temp.match(/is/g) || []).length;
+document.write(count)
+    }
+    occur();
+
+    /* task 14 */
+    function circle(radius)
+{
+    this.radius = radius;
+  // area method
+    this.area = function () 
+    {
+        return Math.PI * this.radius * this.radius;
+    };
+  // perimeter method
+    this.perimeter = function ()
+    {
+        return 2*Math.PI*this.radius;
+    };
+}
+var c = new circle(3);
+console.log('Area =', c.area().toFixed(2));
+console.log('perimeter =', c.perimeter().toFixed(2));
