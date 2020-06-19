@@ -457,6 +457,7 @@ dueDate.setHours(dueDate.getHours()+168);
 var day = dueDate.toString();
 var accDate = day.slice(8,11);
 accDate = parseInt(accDate);
+var accDueDate = day.slice(0,11);
 
 document.write("Current Date : "+accDate+"<br>");
 
@@ -465,8 +466,8 @@ document.write("Customer's name: "+name+"<br>");
 document.write("The current month is: "+months[date.getMonth()]+"<br>");
 document.write("Number of Units: "+currUnits+"<br>");
 document.write("Charges per unit: "+unitCharges+"<br>");
-document.write("Net payable amount within Due Date which is: "+dueDate+""+withinDate+"<br>");
-document.write("Net payable amount after due date: "+dueDate+" "+afterDate+"<br>");
+document.write("DueDate: "+accDueDate+" Amount:"+withinDate+"<br>");
+document.write("Net payable amount after due date: "+afterDate);
 
 
 
