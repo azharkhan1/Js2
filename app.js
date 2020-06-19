@@ -443,7 +443,35 @@ var age = Math.floor(diff/(1000*60*60*24*30*12));
 document.write(age);
 
 
+/* task 14 */
+var date = new Date();
+var months = ["January","Febuary","March","April","May","June","July","August","September","October","November","December"];
+var name = prompt ("Enter customer's name");
+var currUnits = +prompt("Enter Units spend");
+var unitCharges = +prompt("Enter charges per unit");
+var lateCharge = 200;
+var withinDate = unitCharges * currUnits
+var afterDate = lateCharge + withinDate;
+var dueDate = new Date();
+dueDate.setHours(dueDate.getHours()+168);
+var day = dueDate.toString();
+var accDate = day.slice(8,11);
+accDate = parseInt(accDate);
 
+document.write("Current Date : "+accDate+"<br>");
+
+
+document.write("Customer's name: "+name+"<br>");
+document.write("The current month is: "+months[date.getMonth()]+"<br>");
+document.write("Number of Units: "+currUnits+"<br>");
+document.write("Charges per unit: "+unitCharges+"<br>");
+document.write("Net payable amount within Due Date which is: "+dueDate+""+withinDate+"<br>");
+document.write("Net payable amount after due date: "+dueDate+" "+afterDate+"<br>");
+
+
+
+taba
+h
 
 
 
@@ -674,3 +702,5 @@ document.write(count)
 var c = new circle(3);
 console.log('Area =', c.area().toFixed(2));
 console.log('perimeter =', c.perimeter().toFixed(2));
+
+
