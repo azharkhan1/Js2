@@ -470,19 +470,6 @@ document.write("DueDate: "+accDueDate+" Amount:"+withinDate+"<br>");
 document.write("Net payable amount after due date: "+afterDate);
 
 
-
-taba
-h
-
-
-
-
-
-
-
-
-
-
 Chapter 35-38
 
 /*task 1 */
